@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+use App\Http\Controllers\Products;
+
+
+Route::get('/', function() {
+    return 'Home page';
 });
+
+Route::get('/products', [Products::class, 'index']);
