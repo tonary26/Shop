@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('title');
             $table->text('description');
             $table->unsignedInteger('price');
+            $table->softDeletes();
         });
     }
 
